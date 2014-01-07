@@ -3,7 +3,7 @@ jquery.modal
 
 A simple jquery Modal boxes.
 
-__<a href="http://creativedream.net/plugins/jquery.modal/" target="_blank">Demo</a>__
+__<a href="http://creativedream.net/plugins/jquery.modal/" target="_blank">Demo Page</a>__
 
 Usage
 -------
