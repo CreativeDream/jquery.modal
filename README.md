@@ -46,4 +46,4 @@ Options
 * __zIndex__ Modal z-index
 * __buttonText__ Custom text for alert, confirm and prompt modals
 * __template__ Custom modal template
-* ___classes__ An object with each class name from modal box
+* <b>_classes</b> An object with each class name from modal box
