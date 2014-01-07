@@ -1,7 +1,7 @@
 jquery.modal
 ============
 
-A simple jquery Modal boxes.
+A simple jquery Modal boxe.
 
 __<a href="http://creativedream.net/plugins/jquery.modal/" target="_blank">Demo Page</a>__
 
