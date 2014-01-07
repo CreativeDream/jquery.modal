@@ -1,13 +1,13 @@
 jquery.modal
 ============
 
-A simple jquery Modal boxes with alert, prompt and confirm support.
+A simple jquery Modal boxes.
 
 __<a href="http://creativedream.net/plugins/jquery.modal/" target="_blank">Demo</a>__
 
 Usage
 -------
-The function is called 'modal'.
+The function is called 'modal'. So just call it ;)
 ~~~ javascript
 modal({
 	 type       : 'default',
@@ -45,3 +45,8 @@ Options
 * __buttonText__ Custom text for alert, confirm and prompt modals
 * __template__ Custom modal template
 * <b>_classes</b> An object with each class name from modal box
+
+License
+-------
+> Licensed under <a href="http://opensource.org/licenses/MIT">MIT license</a>.
+
