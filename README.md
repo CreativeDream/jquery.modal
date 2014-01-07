@@ -9,25 +9,23 @@ Usage
 -------
 The function is called 'modal'.
 ~~~ javascript
-  modal(
-	  {
-		 type       : 'default',
-		 title      : 'Title',
-		 text       : 'It works.',
-		 buttons    : [{text:'OK', val:true, onClick:function(e){return true} }, {text:'Cancel', val:'cancel', onClick:function(e){alert('If function return false, modal will not disappear.'); return false} }],
-		 center     : true,
-		 autoclose  : false,
-		 callback   : null,
-		 onShow     : function(e){console.log(e);},
-		 closeClick : true,
-		 theme      : 'default',
-		 background : 'rgba(52,73,94,0.7)',
-		 zIndex     : 1050,
-		 buttonText : {ok:'OK',yes:'Yes',no:'No',cancel:'Cancel'},
-		 template   : '<div class="modal-box"><div class="modal-title"><a class="modal-close-btn"></a></div><div class="modal-text"></div><div class="modal-buttons"></div></div>',
-		 _classes   : {box:'.modal-box', title:'.modal-title', content:'.modal-text', buttons:'.modal-buttons', closebtn:'.modal-close-btn'}
-	  }
-  );
+modal({
+	 type       : 'default',
+	 title      : 'Title',
+	 text       : 'It works.',
+	 buttons    : [{text:'OK', val:true, onClick:function(e){return true} }, {text:'Cancel', val:'cancel', onClick:function(e){alert('If function return false, modal will not disappear.'); return false} }],
+	 center     : true,
+	 autoclose  : false,
+	 callback   : null,
+	 onShow     : function(e){console.log(e);},
+	 closeClick : true,
+	 theme      : 'default',
+	 background : 'rgba(52,73,94,0.7)',
+	 zIndex     : 1050,
+	 buttonText : {ok:'OK',yes:'Yes',no:'No',cancel:'Cancel'},
+	 template   : '<div class="modal-box"><div class="modal-title"><a class="modal-close-btn"></a></div><div class="modal-text"></div><div class="modal-buttons"></div></div>',
+	 _classes   : {box:'.modal-box', title:'.modal-title', content:'.modal-text', buttons:'.modal-buttons', closebtn:'.modal-close-btn'}
+});
 ~~~~
 
 Options
