@@ -1,169 +1,480 @@
-/*!
- * CSS Modal
+/*! * CSS Modal
  * Copyright (c) 2014 CreativeDream
  * Website http://creativedream.net/plugins
- * Version: 1.0 (07-01-2014)
+ * Version: 1.2 (20-10-2014)
 */
-
-#modal-window .modal-box{
-	position: absolute;
-	width: 560px;
-	top: 10%;
-	left: 10%;
-	background-color: #ffffff;
-	border: 1px solid #999;
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	-webkit-border-radius: 6px;
-	   -moz-border-radius: 6px;
-	        border-radius: 6px;
-	outline: none;
-	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-	   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-	        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-	-webkit-background-clip: padding-box;
-	   -moz-background-clip: padding-box;
-	        background-clip: padding-box;
-	
-	font-family:sans-serif;	
+#modal-window {
+    background-color: rgba(0, 0, 0, 0.498039);
 }
-/* Modal Ttitle */
-#modal-window .modal-box .modal-title{
-	padding: 9px 15px;
-    border-bottom: 1px solid #eee;
-	font-size:22px;
-	position:relative;
+
+#modal-window .modal-box {
+    width: 560px;
+    top: 10%;
+    left: 10%;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    *border: 1px solid #bbb;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    outline: none;
+    -webkit-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    font-family: sans-serif;
+    color: #444;
+    overflow: hidden;
+}
+
+/* Modal Sizes */
+#modal-window .modal-box.modal-size-large {
+    width: 70%;
+}
+
+#modal-window .modal-box.modal-size-small {
+    width: 350px;
+}
+
+/* 
+
+    Modal Title
+
+*/	
+#modal-window .modal-box .modal-title {
+    position: relative;
+    padding: 11px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+#modal-window .modal-box .modal-title h3 {
+    font-size: 22px;
+    font-weight: normal;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 /* Modal Close Button */
-#modal-window .modal-box .modal-title .modal-close-btn{
-	position:absolute;
-	display:block;
-	width:14px;
-	height:14px;
-	right:20px;
-	top:50%;
-	margin-top:-7px;
-	cursor:pointer;
-	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExOEMxNDkyODc0N0NBMUEwNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3N0ZBOTUxNzNERkIxMUUyQUZGMEFDRjY0RjNFODlDOCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3N0ZBOTUxNjNERkIxMUUyQUZGMEFDRjY0RjNFODlDOCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkY3N0YxMTc0MDcyMDY4MTE4MDgzRkQyMTE2MTM0QUNBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkY3N0YxMTc0MDcyMDY4MTE4QzE0OTI4NzQ3Q0ExQTA0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+5Ke+4QAAAMlJREFUeNqkk90KwyAMha0dvp/ghfthsFcb67YLYe83EBdZlCxL3KCFU0nM+WqjTqUUs+bZ1Nd2d6jDDDqDHqCk1AeQBx1B+Xa9vAFovmNBwFwSzAvIoWKFWJxciNGxmJtp3FeQMDkziCEfcCTObYUUEPE3JAg3xwawZKJBMsm5kZkDNIhqlgC0+J/cFyAIDTOD3fkABKXbeQSxP8xRaWyHNIAfdFvbHU8BJ9JdqdscktDTD9ITtCcnTLpMDRLwMlWPmdZe55cAAwD+1kOdnSr5eQAAAABJRU5ErkJggg==') no-repeat center;
-	background-size:14px,14px;
-	opacity:0.5;
-	filter: alpha(opacity=50);
+#modal-window .modal-box .modal-title .modal-close-btn {
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 14px;
+    right: 20px;
+    top: 50%;
+    margin-top: -7px;
+    cursor: pointer;
+    background: #fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExOEMxNDkyODc0N0NBMUEwNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3N0ZBOTUxNzNERkIxMUUyQUZGMEFDRjY0RjNFODlDOCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3N0ZBOTUxNjNERkIxMUUyQUZGMEFDRjY0RjNFODlDOCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkY3N0YxMTc0MDcyMDY4MTE4MDgzRkQyMTE2MTM0QUNBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkY3N0YxMTc0MDcyMDY4MTE4QzE0OTI4NzQ3Q0ExQTA0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+5Ke+4QAAAMlJREFUeNqkk90KwyAMha0dvp/ghfthsFcb67YLYe83EBdZlCxL3KCFU0nM+WqjTqUUs+bZ1Nd2d6jDDDqDHqCk1AeQBx1B+Xa9vAFovmNBwFwSzAvIoWKFWJxciNGxmJtp3FeQMDkziCEfcCTObYUUEPE3JAg3xwawZKJBMsm5kZkDNIhqlgC0+J/cFyAIDTOD3fkABKXbeQSxP8xRaWyHNIAfdFvbHU8BJ9JdqdscktDTD9ITtCcnTLpMDRLwMlWPmdZe55cAAwD+1kOdnSr5eQAAAABJRU5ErkJggg==') no-repeat center;
+    background-size: 14px,14px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
-#modal-window .modal-box .modal-title .modal-close-btn:hover{
-	opacity:1;	
-	filter: alpha(opacity=100);
+
+#modal-window .modal-box .modal-title .modal-close-btn:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
 }
-/* Modal Title Classes */
-#modal-window .modal-box .modal-title.success{
-	background-color:#61b832;	
+
+/* 
+
+    Modal Text
+
+*/	
+#modal-window .modal-box .modal-text {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px 15px;
+    overflow-y: auto;
 }
-#modal-window .modal-box .modal-title.warning{
-	background-color:#eaaf51;	
+
+#modal-window .modal-box img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
 }
-#modal-window .modal-box .modal-title.error{
-	background-color:#de4343;	
-}
-#modal-window .modal-box .modal-title.info{
-	background-color:#4ea5cd;	
-}
-#modal-window .modal-box .modal-title.success,
-#modal-window .modal-box .modal-title.warning,
-#modal-window .modal-box .modal-title.error,
-#modal-window .modal-box .modal-title.info{
-	border-top-left-radius:5px;
-	border-top-right-radius:5px;
-	color:#FFF;
-	text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.25);
-}
-/* Modal Close Button White Color*/
-#modal-window .modal-box .modal-title.success .modal-close-btn,
-#modal-window .modal-box .modal-title.warning .modal-close-btn,
-#modal-window .modal-box .modal-title.error .modal-close-btn,
-#modal-window .modal-box .modal-title.info .modal-close-btn{
-	background:url('data:image/png;base64,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') no-repeat center;
-}
-/* Modal Text */
-#modal-window .modal-box .modal-text{
-	font-size:14px;
-	line-height:18px;
-	padding: 15px;
-    overflow-y:auto;
-}
+
 /* Modal Prompt Input */
-#modal-window .modal-box .modal-text input.modal-prompt-input{
-	width:97%;
-	display:block;
-	margin:0;
-	padding:0;
-	outline:0;
-	border: 1px solid #dddddd;
+#modal-window .modal-box .modal-text input.modal-prompt-input {
+    width: 97%;
+    width: -webkit-calc(100% - 14px);
+    width: -moz-calc(100% - 14px);
+    width: calc(100% - 14px);
+    display: block;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 1px solid #dddddd;
     border-top: 1px solid #cccccc;
-	margin: 10px 0px 10px 0px;
-	padding:5px;
-	color: #333333;
-	-webkit-border-radius: 3px;
-	   -moz-border-radius: 3px;
-            border-radius: 3px;
-	-webkit-box-shadow: inset 0px 0px 2px #eeeeee;
-	   -moz-box-shadow: inset 0px 0px 2px #eeeeee;
-			box-shadow: inset 0px 0px 2px #eeeeee;		
-	
-	-webkit-transition:all 0.1s linear;
-	        transition:all 0.1s linear;
+    margin: 10px 0px 10px 0px;
+    padding: 6px;
+    color: #333333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0px 0px 2px #eeeeee;
+    -moz-box-shadow: inset 0px 0px 2px #eeeeee;
+    box-shadow: inset 0px 0px 2px #eeeeee;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
 }
-#modal-window .modal-box .modal-text input.modal-prompt-input:hover{
-	border: 1px solid #bbbbbb;
+
+#modal-window .modal-box .modal-text input.modal-prompt-input:hover {
+    border: 1px solid #bbbbbb;
     border-top: 1px solid #aaaaaa;
 }
+
 #modal-window .modal-box .modal-text input.modal-prompt-input:focus,
-#modal-window .modal-box .modal-text input.modal-prompt-input:active{
-	border-color: rgba(82, 168, 236, 0.8);
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.5);
-	   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.5);
-			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.5);
+#modal-window .modal-box .modal-text input.modal-prompt-input:active {
+    border-color: rgba(82, 168, 236, 0.8);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.3);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.3);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.3);
 }
-/* Modal Buttons */	
-#modal-window .modal-box .modal-buttons{
-	padding:15px;
-	text-align: right;
-	background-color: #f5f5f5;
-	border-top: 1px solid #ddd;
-	-webkit-border-radius: 0 0 6px 6px;
-	-moz-border-radius: 0 0 6px 6px;
-	border-radius: 0 0 6px 6px;	
+
+/* 
+
+    Modal Buttons 
+
+*/	
+#modal-window .modal-box .modal-buttons {
+    padding: 12px 15px;
+    text-align: right;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
 }
-#modal-window .modal-box .modal-buttons a.modal-btn{
-	height: 20px;
-	display: inline-block;
-	margin-left:5px;
-	text-decoration: none;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 12px;
-	padding: 8px 10px 0 10px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.08);
-	-moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.08);
-	box-shadow:0 1px 1px rgba(0, 0, 0, 0.08);
-	border: 1px solid #d4d4d4;
-	color: #555555;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA4CAAAAAAZC80wAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQIW2P4zfSPiYHpPxBDIISFm4TRzEx/gDQjmAcjUXlYSQDlsQxn8JwDyQAAAABJRU5ErkJggg==);
-	cursor:pointer;
+
+#modal-window .modal-box .modal-buttons a.modal-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: normal;
+    font-weight: bold;
+    color: #555;
+    border-radius: 0;
+    vertical-align: middle;
 }
-#modal-window .modal-box .modal-buttons a.modal-btn:hover{
-	border: 1px solid #c4c4c4;
-	background-position: 0 -28px;
+
+#modal-window .modal-box .modal-buttons a.modal-btn:active,a.modal-btn:focus {
+    outline: none !important;
 }
-#modal-window .modal-box .modal-buttons a.modal-btn:active{
-	border-top:1px solid #b4b4b4;
-	border: 1px solid #c4c4c4;
-	background-position: 0 -28px;		
-    -webkit-box-shadow: inset 0px 2px 10px #DDD;
-	   -moz-box-shadow: inset 0px 2px 10px #DDD;
-	        box-shadow: inset 0px 2px 10px #DDD;	
+
+#modal-window .modal-box .modal-buttons a.modal-btn:active,a.modal-btn.active {
+    -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 0 7px rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 7px rgba(0,0,0,0.2);
 }
-#modal-window .modal-box .modal-buttons a.modal-btn.cancel{
-	color: #961D2C;
+
+#modal-window .modal-box .modal-buttons a.modal-btn+a.modal-btn {
+    margin-left: 5px;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .65;
+    filter: alpha(opacity=65);
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-large {
+    padding: 8px 14px;
+    font-size: 16px;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-small {
+    padding: 6px 8px;
+    font-size: 10px;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-rounded {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-circle {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-square {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn i,
+#modal-window .modal-box .modal-buttons a.modal-btn img {
+    vertical-align: middle;
+    display: inline-block;
+    float: left;
+    max-height: 16px;
+    margin-right: 5px;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn {
+    background-color: #fcfcfc;
+    border-color: #c9c9c9;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-green {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-green:hover {
+    background-color: #449d44;
+    border-color: #398439;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-purple {
+    background-color: #8149B4;
+    border-color: #6922AD;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-purple:hover {
+    background-color: #6f32a8;
+    border-color: #5b149e;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-orange {
+    background-color: #f7aa47;
+    border-color: #eea236;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-orange:hover {
+    background-color: #f69f2f;
+    border-color: #d58512;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-pink {
+    background-color: #ff6264;
+    border-color: #eb5b5c;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-pink:hover {
+    background-color: #ff484b;
+    border-color: #e53a3d;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-turquoise {
+    background-color: #00b19d;
+    border-color: #11a594;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-turquoise:hover {
+    background-color: #009886;
+    border-color: #0b8173;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-light-green {
+    background-color: #8dc63f;
+    border-color: #7db432;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-light-green:hover {
+    background-color: #82b838;
+    border-color: #75a336;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-light-blue {
+    background-color: #428bca;
+    border-color: #357ebd;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-light-blue:hover {
+    background-color: #3071a9;
+    border-color: #285e8e;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-blue {
+    background-color: #0e62c7;
+    border-color: #0D54AA;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-blue:hover {
+    background-color: #0c56af;
+    border-color: #0B4992;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-red {
+    background-color: #cc3f44;
+    border-color: #bd1b21;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-red:hover {
+    background-color: #ab2d32;
+    border-color: #96050b;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-light-red {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-light-red:hover {
+    background-color: #c9302c;
+    border-color: #ac2925;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-yellow {
+    background-color: #ffba00;
+    border-color: #e4a703;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-yellow:hover {
+    background-color: #f0bb2e;
+    border-color: #dba71a;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-black {
+    background-color: #444;
+    border-color: #313131;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-black:hover {
+    background-color: #333;
+    border-color: #222;
+    color: #fff;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-white {
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-white:hover {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+}
+
+#modal-window .modal-box .modal-buttons a.modal-btn.btn-white:active,#modal-window .modal-box .modal-buttons a.modal-btn.btn-white:focus {
+    -webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* 
+
+    Modal Title Types
+
+*/	
+#modal-window .modal-box .modal-title.modal-title-success {
+    background-color: #61b832;
+}
+
+#modal-window .modal-box .modal-title.modal-title-warning {
+    background-color: #f1b40e;
+}
+
+#modal-window .modal-box .modal-title.modal-title-error {
+    background-color: #de4343;
+}
+
+#modal-window .modal-box .modal-title.modal-title-info {
+    background-color: #4ea5cd;
+}
+
+#modal-window .modal-box .modal-title.modal-title-inverted {
+    background-color: #444;
+}
+
+#modal-window .modal-box .modal-title.modal-title-primary {
+    background-color: #428bca;
+}
+
+#modal-window .modal-box .modal-title.modal-title-success,
+#modal-window .modal-box .modal-title.modal-title-warning,
+#modal-window .modal-box .modal-title.modal-title-error,
+#modal-window .modal-box .modal-title.modal-title-info,
+#modal-window .modal-box .modal-title.modal-title-inverted,
+#modal-window .modal-box .modal-title.modal-title-primary {
+    color: #FFF;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border-bottom-color: transparent;
+}
+/* Modal Close Button White Color*/
+#modal-window .modal-box .modal-title.modal-title-success .modal-close-btn,
+#modal-window .modal-box .modal-title.modal-title-warning .modal-close-btn,
+#modal-window .modal-box .modal-title.modal-title-error .modal-close-btn,
+#modal-window .modal-box .modal-title.modal-title-info .modal-close-btn,
+#modal-window .modal-box .modal-title.modal-title-inverted .modal-close-btn,
+#modal-window .modal-box .modal-title.modal-title-primary .modal-close-btn {
+    background: url('data:image/png;base64,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') no-repeat center;
+}
+
+/* 
+
+    Modal Theme: Xenon
+
+*/	
+#modal-window .modal-box.modal-theme-xenon {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+#modal-window .modal-box.modal-theme-xenon .modal-text {
+    padding: 25px;
+}
+
+#modal-window .modal-box.modal-theme-xenon .modal-title {
+    padding: 15px 25px;
+}
+
+#modal-window .modal-box.modal-theme-xenon .modal-title .modal-close-btn {
+    right: 25px;
+}
+
+#modal-window .modal-box.modal-theme-xenon .modal-buttons {
+    padding: 15px 25px;
+    background: #fafafa;
+}
+
+#modal-window .modal-box.modal-theme-xenon .modal-buttons .modal-btn {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
 }
