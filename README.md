@@ -68,7 +68,8 @@ Options
 * __onShow__ After modal appearing, it has a parameter with modal object
 * __closeClick__ On click near the modal box, close it
 * __closable__ Enable Modal closing
-* __theme__ Custom class for your modal, Example: 'xenon'
+* __animate__ Enable slide Animation
+* __theme__ Custom class for your modal (xenon | atlant | reseted)
 * __background__ Background Color of modal overlay
 * __zIndex__ Modal z-index
 * __buttonText__ Custom text for alert, confirm and prompt modals
