@@ -10,23 +10,45 @@ Usage
 The function is called 'modal'. So just call it ;)
 ~~~ javascript
 modal({
-	 type       : 'default',
-	 title      : 'Title',
-	 text       : 'It works.',
-	 buttons    : [{text:'OK', val:true, onClick:function(e){return true} }, {text:'Cancel', val:'cancel', 	
-	 onClick    : function(e){alert('If function return false, modal will not disappear.'); return false} }],
-	 center     : true,
-	 autoclose  : false,
-	 callback   : null,
-	 onShow     : function(e){console.log(e);},
-	 closeClick : true,
-	 closable   : true,
-	 theme      : 'default',
-	 background : 'rgba(0,0,0,0.5)',
-	 zIndex     : 1050,
-	 buttonText : {ok:'OK',yes:'Yes',cancel:'Cancel'},
-	 template   : '<div class="modal-box"><div class="modal-title"><a class="modal-close-btn"></a></div><div class="modal-text"></div><div class="modal-buttons"></div></div>',
-	 _classes   : {box:'.modal-box', title:'.modal-title', content:'.modal-text', buttons:'.modal-buttons', closebtn:'.modal-close-btn'}
+	type: 'inverted', //Type of Modal Box (alert | confirm | prompt | success | warning | error | info | inverted | primary)
+	title: 'Message', //Modal Title
+	text: 'Text', //Modal HTML Content
+	size: 'normal', //Modal Size (normal | large | small)
+	buttons: [{
+		text: 'OK', //Button Text
+		val: 'ok', //Button Value
+		eKey: true, //Enter Keypress
+		addClass: 'btn-light-blue', //Button Classes (btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pink | btn-turquoise | btn-blue | btn-light-blue | btn-light-red | btn-red | btn-yellow | btn-white | btn-black | btn-rounded | btn-circle | btn-square | btn-disabled)
+		onClick: function(dialog) {
+			console.log(dialog);
+			alert('Look in console!');
+			return true;
+		}
+	}, ],
+	center: true, //Center Modal Box?
+	autoclose: false, //Auto Close Modal Box?
+	callback: null, //Callback Function after close Modal (ex: function(result){alert(result);})
+	onShow: function(r) {}, //After show Modal function
+	closeClick: true, //Close Modal on click near the box
+	closable: true, //If Modal is closable
+	theme: 'atlant', //Modal Custom Theme (xenon | atlant | reseted)
+	animate: false, //Slide animation
+	background: 'rgba(0,0,0,0.5)', //Background Color, it can be null
+	zIndex: 1050, //z-index
+	buttonText: {
+		ok: 'OK',
+		yes: 'Yes',
+		cancel: 'Cancel'
+	},
+	template: '<div class="modal-box"><div class="modal-inner"><div class="modal-title"><a class="modal-close-btn"></a></div><div class="modal-text"></div><div class="modal-buttons"></div></div></div>',
+	_classes: {
+		box: '.modal-box',
+		boxInner: ".modal-inner",
+		title: '.modal-title',
+		content: '.modal-text',
+		buttons: '.modal-buttons',
+		closebtn: '.modal-close-btn'
+	}
 });
 ~~~~
 
