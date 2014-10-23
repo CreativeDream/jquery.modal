@@ -1,0 +1,130 @@
+/* 
+ * CSS Modal |  Atlant Theme
+ * Copyright (c) 2014 CreativeDream
+ * Website http://creativedream.net/plugins
+ * Version: 1.2 (20-10-2014)
+*/
+#modal-window .modal-box.modal-theme-atlant {
+    position: relative;
+    width: 100%;
+    left: 0 !important;
+    margin-left: 0 !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #555;
+    background: rgba(255,255,255,.9);
+}
+
+#modal-window .modal-box.modal-theme-atlant .modal-inner {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Modal Sizes */
+#modal-window .modal-box.modal-theme-atlant.modal-size-normal .modal-inner {
+    width: 560px;
+}
+
+#modal-window .modal-box.modal-theme-atlant.modal-size-large .modal-inner {
+    width: 1000px;
+}
+
+#modal-window .modal-box.modal-theme-atlant.modal-size-small .modal-inner {
+    width: 350px;
+}
+
+/* Modal Responsive */
+@media only screen and (max-width : 580px) {
+    #modal-window .modal-box.modal-theme-atlant.modal-size-normal .modal-inner {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 1020px) {
+    #modal-window .modal-box.modal-theme-atlant.modal-size-large .modal-inner {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 370px) {
+    #modal-window .modal-box.modal-theme-atlant.modal-size-small .modal-inner {
+        width: auto;
+    }
+}
+
+/* 
+
+    Modal Title
+
+*/	
+#modal-window .modal-box.modal-theme-atlant .modal-title {
+    padding: 10px 0 10px;
+    background-color: transparent !important;
+    border-bottom-color: transparent;
+    text-shadow: none;
+}
+
+#modal-window .modal-box.modal-theme-atlant .modal-title h3 {
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+#modal-window .modal-box.modal-theme-atlant .modal-title .modal-close-btn {
+    right: 0;
+}
+
+/* 
+
+    Modal Text
+
+*/	
+#modal-window .modal-box.modal-theme-atlant .modal-text {
+    padding: 0;
+    font-size: 12px;
+}
+
+#modal-window .modal-box.modal-theme-atlant .modal-buttons {
+    padding: 15px 0 5px;
+    border-top-color: transparent;
+    background: none;
+}
+
+/* 
+
+    Modal Types
+
+*/	
+#modal-window .modal-box.modal-theme-atlant.modal-type-success {
+    background: rgba(149,183,93,.9);
+}
+
+#modal-window .modal-box.modal-theme-atlant.modal-type-info {
+    background: rgba(63,186,228,.9);
+}
+
+#modal-window .modal-box.modal-theme-atlant.modal-type-warning {
+    background: rgba(254,162,35,.9);
+}
+
+#modal-window .modal-box.modal-theme-atlant.modal-type-error {
+    background: rgba(182,70,69,.9);
+}
+
+#modal-window .modal-box.modal-theme-atlant.modal-type-inverted {
+    background: rgba(0,0,0,.8);
+}
+
+#modal-window .modal-box.modal-theme-atlant.modal-type-primary {
+    background: rgba(66,139,202,.9);
+}
+
+#modal-window .modal-box.modal-theme-atlant.modal-type-success,
+#modal-window .modal-box.modal-theme-atlant.modal-type-warning,
+#modal-window .modal-box.modal-theme-atlant.modal-type-error,
+#modal-window .modal-box.modal-theme-atlant.modal-type-info,
+#modal-window .modal-box.modal-theme-atlant.modal-type-inverted,
+#modal-window .modal-box.modal-theme-atlant.modal-type-primary {
+    color: #FFF;
+}
