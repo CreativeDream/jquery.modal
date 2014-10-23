@@ -60,7 +60,7 @@ Options
 * __buttons__ is an array with buttons. Each button is in an object array and contais: 
         text, 
 	val, 
-	addClass: Class for button(btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pink | btn-turquoise | btn-blue | btn-light-blue | btn-light-red | btn-red | btn-yellow | btn-white | btn-black | btn-rounded | btn-circle | btn-square), 
+	addClass: Class for button(btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pink | btn-turquoise | btn-blue | btn-light-blue | btn-light-red | btn-red | btn-yellow | btn-white | btn-black | btn-rounded | btn-circle | btn-square | btn-disabled), 
 	onClick(return){} callback('return' contains is an object with keys: bObj - button clicked, bOpts - info abou clicked button from options, val - button value; methods: getContet, getTitle, getModal, setClosable, setContent, setTitle; if function returns false - modal will not disappear)
 * __center__ Center align?, can be true or false
 * __autoclose__ Autoclose Modal?, can be true or false,
