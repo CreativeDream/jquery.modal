@@ -33,7 +33,7 @@ modal({
 	closable: true, //If Modal is closable
 	theme: 'atlant', //Modal Custom Theme (xenon | atlant | reseted)
 	animate: false, //Slide animation
-	background: 'rgba(0,0,0,0.5)', //Background Color, it can be null
+	background: 'rgba(0,0,0,0.35)', //Background Color, it can be null
 	zIndex: 1050, //z-index
 	buttonText: {
 		ok: 'OK',
