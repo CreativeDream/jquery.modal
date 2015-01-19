@@ -4,14 +4,14 @@
  * Version: 1.2 (20-10-2014)
 */
 #modal-window {
-    background-color: rgba(0, 0, 0, 0.498039);
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
-#modal-window *{
+#modal-window > *{
     margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
 }
 
 #modal-window .modal-box {
