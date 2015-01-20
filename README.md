@@ -7,6 +7,20 @@ __<a href="http://creativedream.net/plugins/jquery.modal/" target="_blank">Demo 
 
 Usage
 -------
+__Styles:__
+
+Include the jquery.modal css file in your html page.
+~~~~ html
+<link href="jquery.modal.css" type="text/css" rel="stylesheet" />
+~~~~
+__Javascript:__
+
+Include the jQuery library and jquery.modal script file in your html page.
+~~~~ html
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="jquery.modal.min.js"></script>
+~~~~
+
 The function is called 'modal'. So just call it ;)
 ~~~ javascript
 modal({
@@ -79,4 +93,3 @@ Options
 License
 -------
 > Licensed under <a href="http://opensource.org/licenses/MIT">MIT license</a>.
-
