@@ -12,5 +12,8 @@
     "CreativeDream <yuliangagarin@mail.ru>"
   ],
   "description": "A simple jquery Modal boxes",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jquery": ">= 1.7.2",
+  }
 }
