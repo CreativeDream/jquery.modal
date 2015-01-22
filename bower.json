@@ -1,0 +1,14 @@
+{
+    "name": "jquery.modal.js",
+    "version": "1.2",
+
+    "ignore": [
+        "**/.*",
+        "bower_components",
+        "test"
+    ],
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+}
