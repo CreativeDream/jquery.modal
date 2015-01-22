@@ -1,5 +1,5 @@
 {
-    "name": "jquery.modal.js",
+    "name": "jquery.modal",
     "version": "1.2",
 
     "main": "js/jquery.modal.min.js",
