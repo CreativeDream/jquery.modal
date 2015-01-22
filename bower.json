@@ -1,16 +1,16 @@
 {
-    "name": "jquery.modal",
-    "version": "1.2",
-
-    "main": "js/jquery.modal.min.js",
-
-    "ignore": [
-        "**/.*",
-        "bower_components",
-        "test"
-    ],
-    "dependencies": {
-    },
-    "devDependencies": {
-    }
+  "name": "jquery.modal",
+  "version": "1.2",
+  "main": "js/jquery.modal.min.js",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "test"
+  ],
+  "homepage": "https://github.com/CreativeDream/jquery.modal",
+  "authors": [
+    "CreativeDream <yuliangagarin@mail.ru>"
+  ],
+  "description": "A simple jquery Modal boxes",
+  "license": "MIT"
 }
