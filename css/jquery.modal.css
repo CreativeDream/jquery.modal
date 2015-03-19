@@ -195,6 +195,7 @@
     font-size: 12px;
     *font-weight: normal;
     font-weight: bold;
+    line-height: normal;
     color: #555;
     border-radius: 0;
     vertical-align: middle;
