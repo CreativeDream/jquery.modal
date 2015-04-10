@@ -3,14 +3,14 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>jQuery Modal 1.2.1 | CreativeDream</title>
+	<title>jQuery Modal 1.2.2 | CreativeDream</title>
 	<!--Stylesheets-->
 	<link href="css/jquery.modal.css" type="text/css" rel="stylesheet" />
 	<link href="css/jquery.modal.theme-xenon.css" type="text/css" rel="stylesheet" />
 	<link href="css/jquery.modal.theme-atlant.css" type="text/css" rel="stylesheet" />
 	<!--jQuery-->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript" src="js/jquery.modal.min.js"></script>
+	<script type="text/javascript" src="js/jquery.modal.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(e) {
 		//alert
@@ -29,6 +29,7 @@
 				text: 'Are you sure you want to delete your brain?',
 				callback: function(result) {
 					alert(result);
+                    return true;
 				}
 			});
 		});
@@ -40,6 +41,7 @@
 				text: 'Type your name:',
 				callback: function(result) {
 					alert(result);
+                    return true;
 				}
 			});
 		});
@@ -105,8 +107,8 @@
 					val: 'ok', //Button Value
 					eKey: true, //Enter Keypress
 					addClass: 'btn-light-blue btn-square', //Button Classes (btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pink | btn-turquoise | btn-blue | btn-light-blue | btn-light-red | btn-red | btn-yellow | btn-white | btn-black | btn-rounded | btn-circle | btn-square | btn-disabled)
-					onClick: function(dialog) {
-						console.log(dialog);
+					onClick: function(argument) {
+						console.log(argument);
 						alert('Look in console!');
 						return true;
 					}
@@ -151,8 +153,8 @@
 					val: 'ok', //Button Value
 					eKey: true, //Enter Keypress
 					addClass: 'btn-light-blue', //Button Classes (btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pink | btn-turquoise | btn-blue | btn-light-blue | btn-light-red | btn-red | btn-yellow | btn-white | btn-black | btn-rounded | btn-circle | btn-square | btn-disabled)
-					onClick: function(dialog) {
-						console.log(dialog);
+					onClick: function(argument) {
+						console.log(argument);
 						alert('Look in console!');
 						return true;
 					}
@@ -187,9 +189,9 @@
 		$('a#custom3').click(function() {
 			modal({
 				type: 'default', //Type of Modal Box (alert | confirm | prompt | success | warning | error | info | inverted | primary)
-				title: 'dance', //Modal Title
-				text: 'Simple primary message with custom options and <b>Atlant</b> theme.', //Modal HTML Content
-				//buttons    : null,
+				title: 'Message', //Modal Title
+				text: 'Simple message with custom options and <b>Reseted</b> theme.', //Modal HTML Content
+				//buttons : null,
 				theme: 'reseted'
 			});
 		});
@@ -201,7 +203,7 @@
 </head>
 
 <body>
-	<h1>jQuery Modal 1.2</h1>
+	<h1>jQuery Modal 1.2.2</h1>
 	<p>************</p>
 	<hr />
 	<h3>Demo:</h3>

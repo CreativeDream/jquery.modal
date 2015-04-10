@@ -1,7 +1,7 @@
 jquery.modal
 ============
 
-A simple jquery Modal boxes.
+A simple jQuery Modal plugin.
 
 __<a href="http://creativedream.net/plugins/jquery.modal/" target="_blank">Demo Page</a>__
 
@@ -22,6 +22,7 @@ Include the jQuery library and jquery.modal script file in your html page.
 ~~~~
 
 The function is called 'modal'. So just call it ;)
+
 ~~~ javascript
 modal({
 	type: 'inverted', //Type of Modal Box (alert | confirm | prompt | success | warning | error | info | inverted | primary)
@@ -41,7 +42,7 @@ modal({
 	}, ],
 	center: true, //Center Modal Box?
 	autoclose: false, //Auto Close Modal Box?
-	callback: null, //Callback Function after close Modal (ex: function(result){alert(result);})
+	callback: null, //Callback Function after close Modal (ex: function(result){alert(result); return true;})
 	onShow: function(r) {}, //After show Modal function
 	closeClick: true, //Close Modal on click near the box
 	closable: true, //If Modal is closable

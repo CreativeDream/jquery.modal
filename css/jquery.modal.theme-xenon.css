@@ -1,8 +1,8 @@
 /* 
  * CSS Modal |  Xenon Theme
- * Copyright (c) 2014 CreativeDream
+ * Copyright (c) 2015 CreativeDream
  * Website http://creativedream.net/plugins
- * Version: 1.2 (20-10-2014)
+ * Version: 1.2.2 (10-04-2015)
 */
 #modal-window .modal-box.modal-theme-xenon {
     -webkit-border-radius: 0;
@@ -16,6 +16,10 @@
 
 #modal-window .modal-box.modal-theme-xenon .modal-title {
     padding: 15px 20px;
+}
+
+#modal-window .modal-box.modal-theme-atlant .modal-title h3 {
+    color: #fff;
 }
 
 #modal-window .modal-box.modal-theme-xenon .modal-title .modal-close-btn {
