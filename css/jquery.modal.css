@@ -7,14 +7,14 @@
     background-color: rgba(0, 0, 0, 0.35);
 }
 
-#modal-window > *{
+#modal-window > * {
     margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
     line-height: 1;
-	vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 #modal-window .modal-box {
