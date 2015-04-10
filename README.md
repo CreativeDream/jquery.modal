@@ -1,9 +1,9 @@
-jquery.modal
+jquery.modal 1.2.2
 ============
 
 A simple jQuery Modal plugin.
 
-__<a href="http://creativedream.net/plugins/jquery.modal/" target="_blank">Demo Page</a>__
+<b><a href="http://creativedream.net/plugins/jquery.modal/" target="blank">Demo</a></b> | <b><a href="https://github.com/CreativeDream/jquery.modal#options">Documentation</a></b>
 
 Usage
 -------
