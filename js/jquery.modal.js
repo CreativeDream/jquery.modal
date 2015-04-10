@@ -114,7 +114,7 @@ function modal(e) {
 					}
 					r = typeof r == "undefined" ? false : r;
 					var o = function() {
-						if (t.callback != null && typeof(t.callback) == "function" ? t.callback(r, i, u.actions) : true) {
+						if (t.callback != null && typeof(t.callback) == "function" ? t.callback(r, i, u.actions) == false ? false : true : true) {
 							i.fadeOut(200, function() {
 								e(this).remove();
 								e("body").css({
@@ -243,16 +243,16 @@ function modal(e) {
 						a = n.index(),
 						f = t.buttons[a];
 					if (e.inArray(o, ["alert", "confirm", "prompt"]) > -1) {
-						s = a == 1 ? true : false;
+						r = s = a == 1 ? true : false;
 						if (o == "prompt") {
-							s = s && i.find("input.modal-prompt-input").size() > 0 != 0 ? i.find("input.modal-prompt-input").val() : false
+							r = s = s && i.find("input.modal-prompt-input").size() > 0 != 0 ? i.find("input.modal-prompt-input").val() : false
 						}
 						u._modalHide()
 					} else {
 						if (n.hasClass("btn-disabled")) {
 							return false
 						}
-						s = f && f["val"] ? f["val"] : true;
+						r = s = f && f["val"] ? f["val"] : true;
 						if (!f["onClick"] || f["onClick"](e.extend({
 								val: s,
 								bObj: n,
