@@ -2,7 +2,7 @@
  * jQuery Modal
  * Copyright (c) 2015 CreativeDream
  * Website http://creativedream.net/plugins
- * Version: 1.2.2 (10-04-2015)
+ * Version: 1.2.3 (10-04-2015)
  * Requires: jQuery v1.7.1 or later
  */
 function modal(e) {
