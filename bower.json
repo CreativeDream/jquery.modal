@@ -1,7 +1,7 @@
 {
   "name": "jquery.modal",
   "version": "1.2.3",
-  "main": "js/jquery.modal.min.js",
+  "main": "src/js/jquery.modal.min.js",
   "ignore": [
     "**/.*",
     "bower_components",
