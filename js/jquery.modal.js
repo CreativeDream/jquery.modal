@@ -29,7 +29,7 @@ function modal(e) {
 				closeClick: true,
 				closable: true,
 				theme: "default",
-				background: "rgba(0,0,0,0.35)",
+				background: null,
 				zIndex: 1050,
 				buttonText: {
 					ok: "OK",
@@ -59,10 +59,12 @@ function modal(e) {
 					i.on("click", "a.modal-btn", function(t) {
 						u._modalBtn(e(this))
 					}).on("click", t._classes.closebtn, function(e) {
+                        r = false;
 						u._modalHide()
 					}).click(function(e) {
 						if (t.closeClick) {
 							if (e.target.id == "modal-window") {
+                                r = false;
 								u._modalHide()
 							}
 						}
