@@ -84,7 +84,7 @@ Options
 * __closeClick__ On click near the modal box, close it
 * __closable__ Enable Modal closing
 * __animate__ Enable slide Animation
-* __theme__ Custom class for your modal (xenon | atlant | reseted)
+* __theme__ Custom class for your modal (default | xenon | atlant | reseted)
 * __background__ Background Color of modal overlay
 * __zIndex__ Modal z-index
 * __buttonText__ Custom text for alert, confirm and prompt modals
