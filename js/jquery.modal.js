@@ -108,7 +108,6 @@ function modal(e) {
 						overflow: "hidden",
 						width: e("body").innerWidth()
 					}).append(o);
-					t.onShow != null ? t.onShow(u.actions) : null;
 				},
 				_modalHide: function(n) {
 					if (t.closable === false) {
@@ -203,7 +202,9 @@ function modal(e) {
 						var h = t.buttons || t.buttons != null ? e(r).text().length * 32 : 900;
 						u._modalHide(h < 900 ? 900 : h)
 					}
-					i.fadeIn(200);
+					i.fadeIn(200, function(){
+                        t.onShow != null ? t.onShow(u.actions) : null;
+                    });
 					u._position();
 				},
 				_position: function() {
