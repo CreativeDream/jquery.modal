@@ -3,7 +3,7 @@ jQuery.modal 1.2.3
 
 A simple jQuery Modal plugin.
 
-<b><a href="http://creativedream.net/plugins/jquery.modal/" target="blank">Demo</a></b> | <b><a href="https://github.com/CreativeDream/jquery.modal#options">Documentation</a></b>
+<b><a href="http://grandesign.md/__cr/plugins/jquery.modal/" target="blank">Demo</a></b> | <b><a href="https://github.com/CreativeDream/jquery.modal#options">Documentation</a></b>
 
 Usage
 -------
