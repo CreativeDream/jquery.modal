@@ -8,8 +8,11 @@
 function modal(e) {
 	return $.cModal(e)
 }(function(e) {
+    var modal_idx=0;
 	e.cModal = function(t) {
-		var n = {
+        modal_idx++;
+        var n, t, r, i, s, o,u;
+		n = {
 				type: "default",
 				title: null,
 				text: null,
@@ -38,21 +41,22 @@ function modal(e) {
 				},
 				template: '<div class="modal-box"><div class="modal-inner"><div class="modal-title"><a class="modal-close-btn"></a></div><div class="modal-text"></div><div class="modal-buttons"></div></div></div>',
 				_classes: {
-					box: ".modal-box",
-					boxInner: ".modal-inner",
-					title: ".modal-title",
-					content: ".modal-text",
-					buttons: ".modal-buttons",
+					box: "#modal-window_"+modal_idx+" .modal-box",
+					boxInner: "#modal-window_"+modal_idx+" .modal-inner",
+					title: "#modal-window_"+modal_idx+" .modal-title",
+					content: "#modal-window_"+modal_idx+" .modal-text",
+					buttons: "#modal-window_"+modal_idx+" .modal-buttons",
 					closebtn: ".modal-close-btn"
 				}
 			},
 			t = e.extend({}, n, t),
-			r, i = e("<div id='modal-window' />").hide(),
+			r,
+            i = e("<div class='modal-window' id='modal-window_"+modal_idx+"' />").hide(),
 			s = t._classes.box,
 			o = i.append(t.template),
 			u = {
 				init: function() {
-					e("#modal-window").remove();
+					e("#modal-window_"+modal_idx).remove();
 					u._setStyle();
 					u._modalShow();
 					u._modalConent();
@@ -63,7 +67,7 @@ function modal(e) {
 						u._modalHide()
 					}).click(function(e) {
 						if (t.closeClick) {
-							if (e.target.id == "modal-window") {
+							if (e.target.id == "modal-window_"+modal_idx) {
                                 r = false;
 								u._modalHide()
 							}
