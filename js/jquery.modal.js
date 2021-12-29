@@ -28,6 +28,7 @@ function modal(e) {
 				animate: true,
 				closeClick: true,
 				closable: true,
+				overflowValue: "",
 				theme: "default",
 				background: null,
 				zIndex: 1050,
@@ -104,6 +105,7 @@ function modal(e) {
 					}
 				},
 				_modalShow: function() {
+					t.overflowValue = e("body").css('overflow');
 					e("body").css({
 						overflow: "hidden",
 						width: e("body").innerWidth()
@@ -119,7 +121,7 @@ function modal(e) {
 							i.fadeOut(200, function() {
 								e(this).remove();
 								e("body").css({
-									overflow: "",
+									overflow: t.overflowValue,
 									width: ""
 								})
 							});
